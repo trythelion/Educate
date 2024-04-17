@@ -1,0 +1,15 @@
+services:
+  mysql:
+    image: 'mysql:latest'
+    environment:
+      - 'MYSQL_DATABASE=educate'
+      - 'MYSQL_PASSWORD=SQLDB'
+      - 'MYSQL_ROOT_PASSWORD=root'
+      - 'MYSQL_USER=admin'
+    ports:
+      - '3306:3306'
+  adminer:
+    image: 'adminer:latest'
+    restart: always
+    ports:
+      - '8050:8080'
