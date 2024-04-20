@@ -20,6 +20,8 @@ public class User {
     private int UUID;
     private String username;
     private String password;
+    private String displayName;
+    private String role;
 
     public User(String username, String password) {
         this.username = username;

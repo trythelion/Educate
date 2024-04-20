@@ -1,5 +1,5 @@
 services:
-  mysql:
+  db:
     image: 'mysql:latest'
     environment:
       - 'MYSQL_DATABASE=educate'
@@ -8,8 +8,10 @@ services:
       - 'MYSQL_USER=admin'
     ports:
       - '3306:3306'
+    container_name: 'db'
   adminer:
     image: 'adminer:latest'
     restart: always
+    container_name: 'adminer'
     ports:
       - '8050:8080'
